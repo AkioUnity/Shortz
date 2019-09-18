@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="155dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imageView1"
+            android:layout_width="115dp"
+            android:layout_height="150dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/top_channel1"
+            app:riv_corner_radius="5dip"
+            app:riv_mutate_background="true"/>
+
+        <customfonts.MyTextView_Roboto_Regular
+            android:id="@+id/txtprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gradient3"
+            android:text="$20"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <customfonts.MyTextView_Roboto_Regular
+        android:layout_marginTop="8dp"
+        android:id="@+id/txtproductname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product name"
+        android:textColor="#4a4a4a"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <RatingBar
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:progressTint="#ffba49"
+            android:rating="5"/>
+
+        <customfonts.MyTextView_Roboto_Regular
+            android:id="@+id/txtreviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(444)"
+            android:textColor="#9b9b9b"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+</LinearLayout>

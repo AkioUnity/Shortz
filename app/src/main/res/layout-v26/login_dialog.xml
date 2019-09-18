@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_dialog" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="Sign In to Shortz"
+            android:textColor="#000"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/assistant_regular"
+                android:text="Phone Number"
+                android:textColor="#61000000"
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/textUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-5dp"
+                android:backgroundTint="#017FB3"
+                android:fontFamily="@font/assistant_regular"
+                android:hint="Enter Phone Number"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textColorHint="#151515"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/assistant_regular"
+                    android:text="Password"
+                    android:textColor="#61000000"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="4dp"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:gravity="right"
+                    android:text="Forgot Password"
+                    android:clickable="true"
+                    android:textColor="#017FB3"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-5dp"
+                android:fontFamily="@font/assistant_regular"
+                android:hint="Enter Password"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textColorHint="#151515"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_regular"
+                android:text="Not yet a play user?"
+                android:textColor="#61000000"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/register_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:fontFamily="@font/assistant_semibold"
+                android:text=" Register Now"
+                android:clickable="true"
+                android:textColor="#017FB3"
+                android:textSize="12dp"
+                android:focusable="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

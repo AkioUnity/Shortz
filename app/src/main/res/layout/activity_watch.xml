@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#313131"
+    android:orientation="vertical"
+    tools:context=".WatchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_watch" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/detail_hero0"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:layout_marginTop="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/detail_hero" />
+                        <ImageView
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/logo_icon" />
+                    </FrameLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/watch_shadow"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/assistant_bold"
+                            android:text="Jenifa’s Diary"
+                            android:textColor="#ffffff"
+                            android:textSize="22dp" />
+
+                        <Button
+                            android:id="@+id/subscribeBtn"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="17dp"
+                            android:layout_marginBottom="25dp"
+                            android:background="#FFCC00"
+                            android:fontFamily="@font/assistant_bold"
+                            android:text="SUBSCRIBE"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_regular"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="-10dp"
+                    android:text="The series tells the story of a native village girl Jenifa (played by Funke Akindele) who desperately wants to get out of her ratchet way of life. In her desperation, she leaves her village and goes to the city of Lagos in order to get a proper education. Toyosi, an old friend is left with no choice than to accommodate her despite the visit being unannounced."
+                    android:textColor="#ffffff"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tablayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#313131"
+                        app:tabGravity="fill"
+                        app:tabIndicatorColor="#fff"
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="#fff"
+                        app:tabTextAppearance="@style/MyMenuTextAppearance1"
+                        app:tabTextColor="#B3FFFFFF" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewpager1"
+                        android:layout_width="match_parent"
+                        android:layout_height="290dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

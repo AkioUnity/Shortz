@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Shortz</string>
+
+    <string name="cutprice"><strike>$ 45.99</strike></string>
+</resources>
