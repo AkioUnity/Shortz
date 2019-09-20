@@ -19,5 +19,9 @@
         </activity>
         <activity android:name="com.akio.shortz.WatchActivity">
         </activity>
+        <activity android:name="com.akio.shortz.WatchListActivity">
+        </activity>
+        <activity android:name="com.akio.shortz.FriendActivity">
+        </activity>
     </application>
 </manifest>

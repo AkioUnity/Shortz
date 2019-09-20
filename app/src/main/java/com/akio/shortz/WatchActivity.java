@@ -68,8 +68,7 @@ public class WatchActivity extends AppCompatActivity implements View.OnClickList
                 break;
             }
             case R.id.backBtn: {
-                Intent i = new Intent(this, HomeActivity.class);
-                this.startActivity(i);
+                finish();
                 break;
             }
             case R.id.shareBtn: {

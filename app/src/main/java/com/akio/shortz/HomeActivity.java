@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import adapter.ChannelAdapter;
 import model.Channel_Model;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends BaseActivity {
 
     private RecyclerView recyclerView;
     private ArrayList<Channel_Model> channel_modelArrayList;
@@ -45,7 +45,6 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
 
         carouselView = (CarouselView) findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.length);
@@ -82,6 +81,11 @@ public class HomeActivity extends AppCompatActivity {
             channel_adapter = new ChannelAdapter(HomeActivity.this,channel_modelArrayList);
             recyclerView.setAdapter(channel_adapter);
         }
+    }
+
+    @Override
+    protected int getLayoutResource() {
+        return R.layout.activity_home;
     }
 
     ImageListener imageListener = new ImageListener() {

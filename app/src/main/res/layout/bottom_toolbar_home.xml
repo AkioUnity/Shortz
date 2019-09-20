@@ -14,29 +14,33 @@
         android:weightSum="5">
 
         <ImageView
+            android:id="@+id/menu_home"
             android:layout_width="24dp"
             android:layout_height="20dp"
             android:layout_weight="1"
             android:src="@drawable/menu_home" />
-
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="20dp"
-            android:layout_weight="1"
-            android:src="@drawable/menu_favorite" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_weight="1"
-            android:src="@drawable/menu_download" />
-        <ImageView
+            android:id="@+id/menu_watch_list"
             android:layout_width="24dp"
             android:layout_height="20dp"
             android:layout_weight="1"
             android:src="@drawable/menu_tv" />
 
         <ImageView
+            android:id="@+id/menu_download"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/menu_download" />
+        <ImageView
+            android:id="@+id/menu_friend"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/menu_friend" />
+
+        <ImageView
+            android:id="@+id/menu_search"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_weight="1"
