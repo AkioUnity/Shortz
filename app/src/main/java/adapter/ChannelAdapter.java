@@ -7,18 +7,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.akio.shortz.HomeActivity;
 import com.akio.shortz.R;
@@ -40,7 +34,7 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ViewHold
 
     @Override
     public ChannelAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.channel,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.channel, parent, false);
         return new ViewHolder(view);
     }
 
@@ -49,9 +43,9 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ViewHold
         holder.channelBtn.setImageResource(Channel_ModelArrayList.get(position).getImageView1());
         holder.channelBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.d("Button","clicked"+position);
+                Log.d("Button", "clicked" + position);
 
-                if (HomeActivity.isLogined){
+                if (HomeActivity.isLogined) {
                     Intent in = new Intent(context, WatchActivity.class);
                     context.startActivity(in);
                     return;
@@ -79,14 +73,14 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ViewHold
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String user = etUsername.getText().toString();
                         String pass = etPassword.getText().toString();
-                        HomeActivity.isLogined=true;
+                        HomeActivity.isLogined = true;
                         Intent in = new Intent(context, WatchActivity.class);
                         context.startActivity(in);
 //                        Toast.makeText(getBaseContext(), "User: " + user + " Password: " + pass + " Logged in.", Toast.LENGTH_LONG).show();
                     }
                 });
                 final AlertDialog dialog = login.create();
-                dialog.setOnShowListener( new DialogInterface.OnShowListener() {
+                dialog.setOnShowListener(new DialogInterface.OnShowListener() {
                     @Override
                     public void onShow(DialogInterface arg0) {
                         dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.parseColor("#8A000000"));
@@ -114,7 +108,7 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ViewHold
 
         public ViewHolder(View itemView) {
             super(itemView);
-            channelBtn=itemView.findViewById(R.id.channelBtn);
+            channelBtn = itemView.findViewById(R.id.channelBtn);
 //            txtprice=itemView.findViewById(R.id.txtprice);
 //            txtproductname=itemView.findViewById(R.id.txtproductname);
 //            txtreviews=itemView.findViewById(R.id.txtreviews);

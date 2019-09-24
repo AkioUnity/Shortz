@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageButton
+                android:id="@+id/facebook_btn"
                 android:layout_width="54dp"
                 android:layout_height="73dp"
                 android:background="@drawable/facebook" />
@@ -38,6 +39,7 @@
                 android:layout_weight="1" />
 
             <ImageButton
+                android:id="@+id/twitter_btn"
                 android:layout_width="48dp"
                 android:layout_height="73dp"
                 android:background="@drawable/hangout"
@@ -49,6 +51,7 @@
                 android:layout_weight="1" />
 
             <ImageButton
+                android:id="@+id/email_btn"
                 android:layout_width="48dp"
                 android:layout_height="73dp"
                 android:background="@drawable/mail"
@@ -62,6 +65,7 @@
             android:layout_marginTop="22dp">
 
             <ImageButton
+                android:id="@+id/message_btn"
                 android:layout_width="50dp"
                 android:layout_height="74dp"
                 android:background="@drawable/message" />
@@ -72,6 +76,7 @@
                 android:layout_weight="1" />
 
             <ImageButton
+                android:id="@+id/copy_btn"
                 android:layout_width="48dp"
                 android:layout_height="74dp"
                 android:background="@drawable/copy"

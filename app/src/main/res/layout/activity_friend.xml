@@ -8,14 +8,42 @@
     android:orientation="vertical"
     tools:context=".FriendActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
         android:orientation="vertical">
 
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/friend_toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="@color/white"-->
+            <!--android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+            <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+            <!--android:elevation="4dp"-->
+            <!--/>-->
         <include layout="@layout/toolbar_friend" />
-
-
+        <TextView
+            android:id="@+id/recent_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Recent"
+            android:fontFamily="@font/assistant_semibold"
+            android:textColor="#FFCC00"
+            android:layout_marginLeft="16dp"
+            android:layout_marginVertical="11dp"
+            android:textSize="14dp"
+            android:visibility="gone" />
+        <ListView
+            android:id="@+id/friend_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:layout_margin="8dp">
+        </ListView>
     </LinearLayout>
     <include layout="@layout/bottom_toolbar_home" />
 </RelativeLayout>

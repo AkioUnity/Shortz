@@ -19,9 +19,14 @@
         </activity>
         <activity android:name="com.akio.shortz.WatchActivity">
         </activity>
+        <activity android:name="com.akio.shortz.ProfileActivity">
+        </activity>
+        <activity android:name="com.akio.shortz.WatchPartyActivity">
+        </activity>
         <activity android:name="com.akio.shortz.WatchListActivity">
         </activity>
-        <activity android:name="com.akio.shortz.FriendActivity">
+        <activity android:name="com.akio.shortz.FriendActivity"
+            android:windowSoftInputMode="stateHidden">
         </activity>
     </application>
 </manifest>

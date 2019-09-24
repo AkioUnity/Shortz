@@ -24,10 +24,10 @@
 
         <customfonts.AssistantSemiBold
             android:id="@+id/toolbar_title"
-            android:layout_width="73dp"
+            android:layout_width="wrap_content"
             android:layout_height="26dp"
             android:layout_marginLeft="28dp"
-            android:text="Watch"
+            android:text="Watch Party"
             android:textColor="#FFFFFF"
             android:textSize="20dp" />
 
@@ -42,7 +42,13 @@
                 android:clickable="true"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_share_black_24px"/>
+                android:src="@drawable/friend_pic1"/>
+            <ImageView
+                android:clickable="true"
+                android:layout_marginLeft="-4dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/friend_pic2"/>
         </LinearLayout>
 
     </LinearLayout>

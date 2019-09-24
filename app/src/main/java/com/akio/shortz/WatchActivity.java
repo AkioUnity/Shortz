@@ -31,6 +31,11 @@ public class WatchActivity extends AppCompatActivity implements View.OnClickList
         ImageView shareBtn= findViewById(R.id.shareBtn);
         shareBtn.setOnClickListener(this);
 
+        shareBtn= findViewById(R.id.watch_list_btn);
+        shareBtn.setOnClickListener(this);
+        shareBtn= findViewById(R.id.watch_party_btn);
+        shareBtn.setOnClickListener(this);
+
         tablayout1 = findViewById(R.id.tablayout1);
         viewpager1 = findViewById(R.id.viewpager1);
 
@@ -71,10 +76,26 @@ public class WatchActivity extends AppCompatActivity implements View.OnClickList
                 finish();
                 break;
             }
+            case R.id.watch_list_btn: {
+                Intent i = new Intent(this, WatchListActivity.class);
+                this.startActivity(i);
+                break;
+            }
+            case R.id.watch_party_btn: {
+                Intent i = new Intent(this, WatchPartyActivity.class);
+                this.startActivity(i);
+                break;
+            }
             case R.id.shareBtn: {
                 Log.d("btn","click");
-                BottomSheetFragment bottomSheetFragment = new BottomSheetFragment();
-                bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody = "Here is the share content body";
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+//                BottomSheetFragment bottomSheetFragment = new BottomSheetFragment();
+//                bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
                 break;
             }
 
