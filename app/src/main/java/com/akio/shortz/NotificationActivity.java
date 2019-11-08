@@ -1,40 +1,26 @@
 package com.akio.shortz;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import adapter.ImageAdapterGridView;
 
-public class WatchPartyActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class NotificationActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_watch_party);
+        setContentView(R.layout.activity_notification);
 
         ImageView backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(this);
-
-        InitVideo();
-
-    }
-
-    public void InitVideo(){
-        VideoView videoView =  (VideoView) findViewById(R.id.videoplayer);
-        String uriPath="http://2019fun.justmy.com/upload/video2.mp4";
-        Uri uri = Uri.parse(uriPath);
-        videoView.setVideoURI(uri);
-//        MediaController mediaController = new MediaController(this);
-//        mediaController.setAnchorView(videoView);
-//        videoView.setMediaController(mediaController);
-        videoView.start();
+        ImageView shareBtn = findViewById(R.id.shareBtn);
+        shareBtn.setVisibility(View.GONE);
+        TextView title=findViewById(R.id.toolbar_title);
+        title.setText("Notification");
     }
 
     public void onClick(View v) {

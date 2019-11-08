@@ -9,7 +9,6 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 import adapter.ImageAdapterGridView;
-import fragment.BottomSheetFragment;
 
 public class WatchListActivity extends BaseActivity {
     GridView androidGridView;

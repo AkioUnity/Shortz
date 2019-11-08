@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.akio.shortz">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,9 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.akio.shortz.VideoActivity">
+        </activity>
         <activity android:name="com.akio.shortz.WatchActivity">
         </activity>
         <activity android:name="com.akio.shortz.ProfileActivity">
+        </activity>
+        <activity android:name="com.akio.shortz.NotificationActivity">
         </activity>
         <activity android:name="com.akio.shortz.WatchPartyActivity">
         </activity>

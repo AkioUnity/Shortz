@@ -123,7 +123,6 @@
                     android:text="The series tells the story of a native village girl Jenifa (played by Funke Akindele) who desperately wants to get out of her ratchet way of life. In her desperation, she leaves her village and goes to the city of Lagos in order to get a proper education. Toyosi, an old friend is left with no choice than to accommodate her despite the visit being unannounced."
                     android:textColor="#ffffff"
                     android:textSize="13dp" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

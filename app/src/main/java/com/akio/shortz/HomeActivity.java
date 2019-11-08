@@ -1,10 +1,13 @@
 package com.akio.shortz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -45,6 +48,9 @@ public class HomeActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ImageView shareBtn = findViewById(R.id.notification_btn);
+        shareBtn.setOnClickListener(this);
 
         carouselView = (CarouselView) findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.length);
@@ -94,4 +100,15 @@ public class HomeActivity extends BaseActivity {
             imageView.setImageResource(sampleImages[position]);
         }
     };
+
+    public void onClick(View v) {
+        super.onClick(v);
+        switch (v.getId()) {
+            case R.id.notification_btn: {
+                Intent i = new Intent(this, NotificationActivity.class);
+                this.startActivity(i);
+                break;
+            }
+        }
+    }
 }

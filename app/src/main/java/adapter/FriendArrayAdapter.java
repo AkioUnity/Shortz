@@ -1,7 +1,6 @@
 package adapter;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,16 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.akio.shortz.HomeActivity;
 import com.akio.shortz.ProfileActivity;
 import com.akio.shortz.R;
-import com.akio.shortz.WatchActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -93,7 +89,7 @@ public class FriendArrayAdapter extends ArrayAdapter<String> implements Filterab
                     }
                 });
                 final AlertDialog dialog = login.create();
-                dialog.setOnShowListener( new DialogInterface.OnShowListener() {
+                dialog.setOnShowListener(new DialogInterface.OnShowListener() {
                     @Override
                     public void onShow(DialogInterface arg0) {
                         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.parseColor("#017FB3"));

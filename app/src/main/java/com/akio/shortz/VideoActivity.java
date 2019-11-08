@@ -12,28 +12,18 @@ import android.widget.VideoView;
 
 import adapter.ImageAdapterGridView;
 
-public class WatchPartyActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class VideoActivity extends AppCompatActivity implements View.OnClickListener {
+    private VideoView videoView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_watch_party);
-
-        ImageView backBtn = findViewById(R.id.backBtn);
-        backBtn.setOnClickListener(this);
-
-        InitVideo();
-
-    }
-
-    public void InitVideo(){
-        VideoView videoView =  (VideoView) findViewById(R.id.videoplayer);
-        String uriPath="http://2019fun.justmy.com/upload/video2.mp4";
+        setContentView(R.layout.activity_video);
+        videoView = (VideoView)findViewById(R.id.videoView);
+        String uriPath="http://2019fun.justmy.com/upload/video1.mp4";
         Uri uri = Uri.parse(uriPath);
         videoView.setVideoURI(uri);
-//        MediaController mediaController = new MediaController(this);
-//        mediaController.setAnchorView(videoView);
-//        videoView.setMediaController(mediaController);
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView);
         videoView.start();
     }
 

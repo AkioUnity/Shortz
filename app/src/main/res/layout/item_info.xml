@@ -8,18 +8,21 @@
     android:background="#313131">
 
     <ImageView
+        android:id="@+id/video_btn1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:scaleType="fitStart"
         android:layout_marginBottom="15dp"
         android:src="@drawable/video0"/>
     <ImageView
+        android:id="@+id/video_btn2"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:scaleType="fitStart"
         android:layout_marginBottom="15dp"
         android:src="@drawable/video1"/>
     <ImageView
+        android:id="@+id/video_btn3"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:scaleType="fitStart"

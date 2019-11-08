@@ -1,8 +1,6 @@
 package com.akio.shortz;
 
 import android.os.Bundle;
-import android.os.Debug;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -27,7 +25,7 @@ public class FriendActivity extends BaseActivity {
     int pics[] = {R.drawable.friend_pic1, R.drawable.friend_pic2, R.drawable.friend_pic0, R.drawable.friend_pic3, R.drawable.friend_pic0, R.drawable.friend_pic4, R.drawable.friend_pic5, R.drawable.friend_pic6, R.drawable.friend_pic7, R.drawable.friend_pic8, R.drawable.friend_pic0};
 
     String recent_nameList[] = {"GCizzle", "HVZer0", "SuperHels2", "J_Cheesman"};
-    int recent_pics[] = {R.drawable.friend_pic1,R.drawable.friend_pic4, R.drawable.friend_pic2, R.drawable.friend_pic3};
+    int recent_pics[] = {R.drawable.friend_pic1, R.drawable.friend_pic4, R.drawable.friend_pic2, R.drawable.friend_pic3};
 
     FriendArrayAdapter adapter;
 
@@ -59,7 +57,7 @@ public class FriendActivity extends BaseActivity {
             public void onTextChanged(CharSequence s, int start, int before,
                                       int count) {
                 mEmptyView.setVisibility(View.GONE);
-                Log.d("akio",s.toString());
+                Log.d("akio", s.toString());
                 adapter = new FriendArrayAdapter(getApplicationContext(), nameList, pics);
                 friendListView.setAdapter(adapter);
                 adapter.getFilter().filter(s);
