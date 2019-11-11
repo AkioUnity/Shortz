@@ -7,4 +7,5 @@
     <dimen name="channel_margin_left">-6dp</dimen>
     <dimen name="channel_margin_top">-3dp</dimen>
     <dimen name="top_channel_margin_top">-3dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

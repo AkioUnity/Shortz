@@ -13,26 +13,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.akio.shortz.HomeActivity">
+        <activity android:name=".SignInActivity"></activity>
+        <activity android:name=".FirstActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.akio.shortz.VideoActivity">
-        </activity>
-        <activity android:name="com.akio.shortz.WatchActivity">
-        </activity>
-        <activity android:name="com.akio.shortz.ProfileActivity">
-        </activity>
-        <activity android:name="com.akio.shortz.NotificationActivity">
-        </activity>
-        <activity android:name="com.akio.shortz.WatchPartyActivity">
-        </activity>
-        <activity android:name="com.akio.shortz.WatchListActivity">
-        </activity>
-        <activity android:name="com.akio.shortz.FriendActivity"
-            android:windowSoftInputMode="stateHidden">
-        </activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".VideoActivity" />
+        <activity android:name=".WatchActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".NotificationActivity" />
+        <activity android:name=".WatchPartyActivity" />
+        <activity android:name=".WatchListActivity" />
+        <activity
+            android:name=".FriendActivity"
+            android:windowSoftInputMode="stateHidden" />
     </application>
+
 </manifest>
