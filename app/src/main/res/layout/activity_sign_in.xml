@@ -6,19 +6,35 @@
     android:background="@color/yellow"
     android:orientation="vertical"
     tools:context=".SignInActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/signin_header"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/gradient_header"/>
+        <ImageView
+            android:id="@+id/first_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/back_arrow"/>
+    </RelativeLayout>
 
-    <ImageView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:src="@drawable/signin_header"/>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:layout_marginTop="-20dp">
+        android:layout_marginHorizontal="20dp"
+        android:elevation="5dp"
+        android:layout_marginTop="-26dp">
         <include layout="@layout/login_dialog" />
-    </RelativeLayout>
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/sign_in_below"
@@ -30,26 +46,7 @@
         android:paddingBottom="20dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/mtn_logo" />
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/logo_icon" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/sign_in_btn"
+            android:id="@+id/register_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -57,14 +54,14 @@
             <customfonts.AssistantSemiBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Already a user?"
+                android:text="No Account? "
                 android:textColor="#151515"
                 android:textSize="14dp" />
 
             <customfonts.AssistantSemiBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign In"
+                android:text="Register Here"
                 android:textColor="#017FB3"
                 android:textSize="14dp" />
 

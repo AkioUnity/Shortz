@@ -21,4 +21,7 @@
     <color name="red">#ff3b30</color>
     <color name="keyboard">#fafafa</color>
     <color name="bg_clolor">#fafafa</color>
+    <color name="register_text">#61000000</color>
+    <color name="register_text_tint">#151515</color>
+
 </resources>

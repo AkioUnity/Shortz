@@ -13,7 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SignInActivity"></activity>
+        <activity android:name=".Boarding3Activity"></activity>
+        <activity android:name=".Boarding2Activity" />
+        <activity android:name=".Boarding1Activity" />
+        <activity android:name=".RegisterPayment2Activity" />
+        <activity android:name=".RegisterPaymentActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".SignInActivity" />
         <activity android:name=".FirstActivity" />
         <activity
             android:name=".SplashActivity"

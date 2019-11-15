@@ -9,14 +9,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_register);
 
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
@@ -25,10 +23,14 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
         ImageView menuBtn= findViewById(R.id.first_back_btn);
         menuBtn.setOnClickListener(this);
-        LinearLayout layoutBtn= findViewById(R.id.register_btn);
+        LinearLayout layoutBtn= findViewById(R.id.sign_in_btn);
         layoutBtn.setOnClickListener(this);
-        TextView textBtn= findViewById(R.id.dlg_sign_in_btn);
+        TextView textBtn= findViewById(R.id.dlg_register_btn);
         textBtn.setOnClickListener(this);
+
+        textBtn= findViewById(R.id.sign_in_toolbar_title);
+        textBtn.setText("Register");
+
     }
 
     public void onClick(View v) {
@@ -37,13 +39,13 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                 finish();
                 break;
             }
-            case R.id.register_btn: {
-                Intent i = new Intent(this, RegisterActivity.class);
+            case R.id.sign_in_btn: {
+                Intent i = new Intent(this, SignInActivity.class);
                 this.startActivity(i);
                 break;
             }
-            case R.id.dlg_sign_in_btn: {
-                Intent i = new Intent(this, HomeActivity.class);
+            case R.id.dlg_register_btn: {
+                Intent i = new Intent(this, RegisterPaymentActivity.class);
                 this.startActivity(i);
                 break;
             }

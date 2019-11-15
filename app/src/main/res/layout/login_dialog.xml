@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#FFF"
+    android:elevation="5dp"
     android:orientation="vertical">
     <include layout="@layout/toolbar_dialog" />
 
@@ -12,17 +13,6 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="8dp"
         android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="18dp"
-            android:fontFamily="@font/assistant_semibold"
-            android:text="Sign In to Shortz"
-            android:textColor="#000"
-            android:textSize="22dp" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/assistant_regular"
-                android:text="Phone Number"
+                android:text="Full Name"
                 android:textColor="#61000000"
                 android:textSize="12dp" />
 
@@ -44,7 +34,7 @@
                 android:layout_marginLeft="-5dp"
                 android:backgroundTint="#017FB3"
                 android:fontFamily="@font/assistant_regular"
-                android:hint="Enter Phone Number"
+                android:hint="Full Name"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
                 android:textColor="#000"
@@ -78,7 +68,7 @@
                     android:layout_marginRight="4dp"
                     android:fontFamily="@font/assistant_semibold"
                     android:gravity="right"
-                    android:text="Forgot Password"
+                    android:text="Forgot Password?"
                     android:clickable="true"
                     android:textColor="#017FB3"
                     android:textSize="12dp" />
@@ -98,30 +88,22 @@
                 android:textSize="16dp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_marginTop="18dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/dlg_sign_in_btn"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/blue_radius_btn"
+            android:fontFamily="@font/assistant_bold"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="13dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="Sign In"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/assistant_regular"
-                android:text="Not yet a play user?"
-                android:textColor="#61000000"
-                android:textSize="12dp" />
-
-            <TextView
-                android:id="@+id/register_btn"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="4dp"
-                android:fontFamily="@font/assistant_semibold"
-                android:text=" Register Now"
-                android:clickable="true"
-                android:textColor="#017FB3"
-                android:textSize="12dp"
-                android:focusable="true" />
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

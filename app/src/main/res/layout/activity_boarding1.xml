@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/yellow"
+    android:orientation="vertical"
+    android:padding="30dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="1.5" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/mtn_logo" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/logo_icon" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Let us create \na personalized experience that \n
+is"
+        android:fontFamily="@font/assistant_semibold"
+        android:textSize="40dp"
+        android:textColor="#252525"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-45dp"
+        android:layout_marginLeft="45dp"
+        android:src="@drawable/made4u" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="2.5" />
+    <ImageView
+        android:id="@+id/boarding_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:src="@drawable/red_next_btn"/>
+</LinearLayout>

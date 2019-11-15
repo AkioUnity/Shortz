@@ -4,13 +4,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.GridView;
-import android.widget.ImageView;
+
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-import adapter.ImageAdapterGridView;
+
 
 public class VideoActivity extends AppCompatActivity implements View.OnClickListener {
     private VideoView videoView;

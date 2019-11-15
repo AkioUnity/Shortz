@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:elevation="5dp"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_dialog" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/assistant_regular"
+                android:text="Card Number"
+                android:textColor="#61000000"
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/textUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-5dp"
+                android:fontFamily="@font/assistant_regular"
+                android:hint="Card Number"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textColorHint="#151515"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/assistant_regular"
+                android:text="Expiry Date"
+                android:textColor="#61000000"
+                android:textSize="12dp" />
+            <EditText
+                android:id="@+id/textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-5dp"
+                android:fontFamily="@font/assistant_regular"
+                android:hint="Expiry Date (DD/YY)"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textColorHint="#151515"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/register_margin_top"
+                android:fontFamily="@font/assistant_regular"
+                android:text="CCV"
+                android:textColor="@color/register_text"
+                android:textSize="@dimen/register_text_size" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/register_margin_left"
+                android:fontFamily="@font/assistant_regular"
+                android:hint="CCV"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textColorHint="@color/register_text_tint"
+                android:textSize="16dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dlg_payment_height"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_regular"
+                    android:text="I confirm and understand that MTN will debit this card for purchases made on the PMI Portal."
+                    android:textColor="#000"
+                    android:textSize="13dp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/register_margin_top"
+                android:fontFamily="@font/assistant_regular"
+                android:text="Set Monthly Limit"
+                android:textColor="@color/register_text"
+                android:textSize="@dimen/register_text_size" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_regular"
+                    android:textSize="16dp"
+                    android:text="Set Limit  "/>
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_regular"
+                    android:text="R0.00"
+                    android:textColor="@color/register_text"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dlg_register_btn"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="18dp"
+            android:background="@drawable/blue_radius_btn"
+            android:fontFamily="@font/assistant_bold"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="13dp"
+            android:text="Save Payment Information"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+</LinearLayout>
