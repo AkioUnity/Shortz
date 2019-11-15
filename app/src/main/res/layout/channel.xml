@@ -11,8 +11,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/channelBtn"
-            android:layout_width="116dp"
-            android:layout_height="144dp"
+            android:layout_width="90dp"
+            android:layout_height="135dp"
             android:src="@drawable/channel1_0"
             />
     </FrameLayout>

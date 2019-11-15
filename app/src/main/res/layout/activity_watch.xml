@@ -38,19 +38,10 @@
                         android:layout_height="wrap_content">
                         <ImageView
                             android:id="@+id/image"
-                            android:layout_width="200dp"
-                            android:layout_height="200dp"
-                            android:src="@drawable/detail_hero" />
-                        <ImageView
-                            android:layout_marginTop="12dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/logo_icon" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/watch_header" />
                     </FrameLayout>
-
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -65,9 +56,13 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
                             android:fontFamily="@font/assistant_bold"
-                            android:text="Jenifa’s Diary"
+                            android:text="Hollywood Game Night"
                             android:textColor="#ffffff"
                             android:textSize="22dp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/watch_stars"/>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -87,15 +82,10 @@
                                 android:layout_width="0dp"
                                 android:layout_height="1dp"
                                 android:layout_weight="1" />
-                            <Button
-                                android:id="@+id/subscribeBtn"
-                                android:layout_width="140dp"
-                                android:layout_height="40dp"
-                                android:background="#FFCC00"
-                                android:fontFamily="@font/assistant_bold"
-                                android:text="SUBSCRIBE"
-                                android:textColor="#000"
-                                android:textSize="15dp" />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/download_season_btn"/>
                             <Space
                                 android:layout_width="0dp"
                                 android:layout_height="1dp"
@@ -113,39 +103,22 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/watch_play_btn"/>
+
                 <TextView
                     android:id="@+id/txtDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/assistant_regular"
                     android:layout_marginHorizontal="15dp"
-                    android:layout_marginTop="-10dp"
-                    android:text="The series tells the story of a native village girl Jenifa (played by Funke Akindele) who desperately wants to get out of her ratchet way of life. In her desperation, she leaves her village and goes to the city of Lagos in order to get a proper education. Toyosi, an old friend is left with no choice than to accommodate her despite the visit being unannounced."
+                    android:layout_marginTop="30dp"
+                    android:text="The game follows two contestants who take part in a casual game night with three celebrities each, making the main episode a game between two four-player teams. Five games are played on each episode, with teams accumulating points based on their performance in each of the games."
                     android:textColor="#ffffff"
                     android:textSize="13dp" />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="35dp"
-                    android:orientation="vertical">
 
-                    <android.support.design.widget.TabLayout
-                        android:id="@+id/tablayout1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#313131"
-                        app:tabGravity="fill"
-                        app:tabIndicatorColor="#fff"
-                        app:tabMode="fixed"
-                        app:tabSelectedTextColor="#fff"
-                        app:tabTextAppearance="@style/MyMenuTextAppearance1"
-                        app:tabTextColor="#B3FFFFFF" />
-
-                    <android.support.v4.view.ViewPager
-                        android:id="@+id/viewpager1"
-                        android:layout_width="match_parent"
-                        android:layout_height="290dp" />
-                </LinearLayout>
 
             </LinearLayout>
         </ScrollView>

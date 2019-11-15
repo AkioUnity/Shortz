@@ -14,6 +14,7 @@ import android.widget.MediaController;
 import android.widget.VideoView;
 
 import adapter.TabproductpageAdapter;
+import fragment.BottomSheetFragment;
 
 public class WatchActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -27,8 +28,8 @@ public class WatchActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_watch);
 
-        Button subscribeBtn= findViewById(R.id.subscribeBtn);
-        subscribeBtn.setOnClickListener(this);
+//        Button subscribeBtn= findViewById(R.id.subscribeBtn);
+//        subscribeBtn.setOnClickListener(this);
         ImageView backBtn= findViewById(R.id.backBtn);
         backBtn.setOnClickListener(this);
         ImageView shareBtn= findViewById(R.id.shareBtn);
@@ -39,34 +40,6 @@ public class WatchActivity extends AppCompatActivity implements View.OnClickList
         shareBtn= findViewById(R.id.watch_party_btn);
         shareBtn.setOnClickListener(this);
 
-        tablayout1 = findViewById(R.id.tablayout1);
-        viewpager1 = findViewById(R.id.viewpager1);
-
-        tablayout1.setTabGravity(TabLayout.GRAVITY_FILL);
-        tablayout1.addTab(tablayout1.newTab().setText("Free Videos"));
-        tablayout1.addTab(tablayout1.newTab().setText("Latest Videos"));
-
-        adapter = new TabproductpageAdapter(getSupportFragmentManager(), tablayout1.getTabCount());
-        viewpager1.setAdapter(adapter);
-        viewpager1.setOffscreenPageLimit(2);
-        viewpager1.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tablayout1));
-        tablayout1.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewpager1.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
 //        InitVideo();
     }
 
@@ -86,12 +59,6 @@ public class WatchActivity extends AppCompatActivity implements View.OnClickList
 
     public void onClick(View v) {
         switch (v.getId()) {
-            case  R.id.viewpager1: {
-                videoView.setVisibility(View.VISIBLE);
-                videoView.start();
-                // do something for button 1 click
-                break;
-            }
             case  R.id.video_btn1: {
                 videoView.setVisibility(View.VISIBLE);
                 videoView.start();
@@ -126,14 +93,14 @@ public class WatchActivity extends AppCompatActivity implements View.OnClickList
             }
             case R.id.shareBtn: {
                 Log.d("btn","click");
-                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
-                String shareBody = "Here is the share content body";
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-                startActivity(Intent.createChooser(sharingIntent, "Share via"));
-//                BottomSheetFragment bottomSheetFragment = new BottomSheetFragment();
-//                bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
+//                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+//                sharingIntent.setType("text/plain");
+//                String shareBody = "Here is the share content body";
+//                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+//                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+//                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+                BottomSheetFragment bottomSheetFragment = new BottomSheetFragment();
+                bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
                 break;
             }
 

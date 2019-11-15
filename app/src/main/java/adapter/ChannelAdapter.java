@@ -26,8 +26,9 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ViewHold
 
     Context context;
     private ArrayList<Channel_Model> Channel_ModelArrayList;
-
-    public ChannelAdapter(Context context, ArrayList<Channel_Model> Channel_ModelArrayList) {
+    private int id;
+    public ChannelAdapter(Context context, ArrayList<Channel_Model> Channel_ModelArrayList,int id) {
+        this.id=id;
         this.context = context;
         this.Channel_ModelArrayList = Channel_ModelArrayList;
     }
@@ -44,7 +45,7 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ViewHold
         holder.channelBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.d("Button", "clicked" + position);
-
+                HomeActivity.isLogined=true;
                 if (HomeActivity.isLogined) {
                     Intent in = new Intent(context, WatchActivity.class);
                     context.startActivity(in);
@@ -109,6 +110,12 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ViewHold
         public ViewHolder(View itemView) {
             super(itemView);
             channelBtn = itemView.findViewById(R.id.channelBtn);
+            if (id==0){
+                ViewGroup.LayoutParams layoutParams = channelBtn.getLayoutParams();
+                layoutParams.width = (int) context.getResources().getDimension(R.dimen.home_channel1_width);
+                layoutParams.height= (int) context.getResources().getDimension(R.dimen.home_channel1_height);
+                channelBtn.setLayoutParams(layoutParams);
+            }
 //            txtprice=itemView.findViewById(R.id.txtprice);
 //            txtproductname=itemView.findViewById(R.id.txtproductname);
 //            txtreviews=itemView.findViewById(R.id.txtreviews);

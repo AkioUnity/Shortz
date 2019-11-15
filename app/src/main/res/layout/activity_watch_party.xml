@@ -28,10 +28,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:visibility="gone"
                     android:src="@drawable/watch_party_image" />
                 <VideoView
                     android:id="@+id/videoplayer"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="260dp" />
                 <LinearLayout
@@ -46,7 +46,7 @@
                         android:fontFamily="@font/assistant_regular"
                         android:textSize="15dp"
                         android:textColor="@color/white"
-                        android:text="Empty Vessel"/>
+                        android:text="A Family Matter"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

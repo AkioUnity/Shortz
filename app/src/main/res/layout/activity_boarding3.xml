@@ -15,6 +15,7 @@
         android:padding="16dp"
         android:src="@drawable/red_icon_back" />
     <TextView
+        android:id="@+id/boarding_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tell us about yourself"
@@ -23,7 +24,6 @@
         android:fontFamily="@font/assistant_semibold"
         android:textSize="20dp"
         android:textColor="#252525"/>
-    <Grid
     <View
         android:layout_width="match_parent"
         android:layout_height="30dp"

@@ -9,6 +9,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 import adapter.ImageAdapterGridView;
+import fragment.BottomSheetFragment;
 
 public class WatchListActivity extends BaseActivity {
     GridView androidGridView;
@@ -39,22 +40,18 @@ public class WatchListActivity extends BaseActivity {
     public void onClick(View v) {
         super.onClick(v);
         switch (v.getId()) {
-            case R.id.subscribeBtn: {
-                // do something for button 1 click
-                break;
-            }
             case R.id.shareBtn: {
                 Log.d("btn", "click");
 
-                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
-                String shareBody = "Here is the share content body";
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Watch Share");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+//                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+//                sharingIntent.setType("text/plain");
+//                String shareBody = "Here is the share content body";
+//                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Watch Share");
+//                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+//                startActivity(Intent.createChooser(sharingIntent, "Share via"));
 
-//                BottomSheetFragment bottomSheetFragment = new BottomSheetFragment();
-//                bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
+                BottomSheetFragment bottomSheetFragment = new BottomSheetFragment();
+                bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
                 break;
             }
 

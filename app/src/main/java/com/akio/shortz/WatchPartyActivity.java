@@ -17,8 +17,7 @@ public class WatchPartyActivity extends AppCompatActivity implements View.OnClic
 
         ImageView backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(this);
-
-        InitVideo();
+//        InitVideo();
 
     }
 

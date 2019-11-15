@@ -28,20 +28,14 @@ public class HomeActivity extends BaseActivity {
     private ChannelAdapter channel_adapter;
     LinearLayout channel_layout;
 
-    CarouselView carouselView;
-
-    int[] sampleImages = {R.drawable.home_a, R.drawable.home_b, R.drawable.home_c, R.drawable.hero_logo};
-
     Integer  images[][]={
-            {R.drawable.channel2_0,R.drawable.channel2_1,R.drawable.channel2_2,R.drawable.channel2_3}
-            ,{R.drawable.channel1_0,R.drawable.channel1_1,R.drawable.channel1_2,R.drawable.channel1_3}
-            ,{R.drawable.popular_0,R.drawable.channel3_1,R.drawable.channel3_2,R.drawable.channel2_3}
-            ,{R.drawable.week_0,R.drawable.week_1,R.drawable.week_2,R.drawable.channel2_3}
-            ,{R.drawable.channel3_0,R.drawable.continue_1,R.drawable.continue_2,R.drawable.channel2_3}
-            ,{R.drawable.top_channel1,R.drawable.top_channel2,R.drawable.top_channel3,R.drawable.top_channel1}
+            {R.drawable.channel1_0,R.drawable.channel1_1,R.drawable.channel1_2}
+            ,{R.drawable.channel2_0,R.drawable.channel2_1,R.drawable.channel2_2,R.drawable.channel2_3}
+            ,{R.drawable.channel3_0,R.drawable.channel3_1,R.drawable.channel3_2,R.drawable.channel3_3}
+            ,{R.drawable.channel4_0,R.drawable.channel4_1,R.drawable.channel4_2,R.drawable.channel4_3}
         };
 
-    String   channel_name[]={"Recommended","Trending","Most Popular","New This Week","Continue Watching","List by Channel"};
+    String   channel_name[]={"Continue Watching","New Releases","Pangea Originals","Because you Watched Chicago Fire…"};
 
     public static boolean isLogined=false;
 
@@ -51,11 +45,6 @@ public class HomeActivity extends BaseActivity {
 
         ImageView shareBtn = findViewById(R.id.notification_btn);
         shareBtn.setOnClickListener(this);
-
-        carouselView = (CarouselView) findViewById(R.id.carouselView);
-        carouselView.setPageCount(sampleImages.length);
-
-        carouselView.setImageListener(imageListener);
 
         LinearLayout parent = findViewById(R.id.linear_layout);
 
@@ -67,11 +56,11 @@ public class HomeActivity extends BaseActivity {
             title.setText(channel_name[i]);
 
             recyclerView = channel_layout.findViewById(R.id.recycler_view);
-            if (i==0){
-                ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) recyclerView.getLayoutParams();
-                params.topMargin = (int)getResources().getDimension(R.dimen.top_channel_margin_top);
-                recyclerView.setLayoutParams(params);
-            }
+//            if (i==0){
+//                ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) recyclerView.getLayoutParams();
+//                params.topMargin = (int)getResources().getDimension(R.dimen.top_channel_margin_top);
+//                recyclerView.setLayoutParams(params);
+//            }
 
             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(HomeActivity.this);
             recyclerView.setLayoutManager(layoutManager);
@@ -84,7 +73,7 @@ public class HomeActivity extends BaseActivity {
                 Channel_Model view = new Channel_Model(images[i][j]);
                 channel_modelArrayList.add(view);
             }
-            channel_adapter = new ChannelAdapter(HomeActivity.this,channel_modelArrayList);
+            channel_adapter = new ChannelAdapter(HomeActivity.this,channel_modelArrayList,i);
             recyclerView.setAdapter(channel_adapter);
         }
     }
@@ -93,13 +82,6 @@ public class HomeActivity extends BaseActivity {
     protected int getLayoutResource() {
         return R.layout.activity_home;
     }
-
-    ImageListener imageListener = new ImageListener() {
-        @Override
-        public void setImageForPosition(int position, ImageView imageView) {
-            imageView.setImageResource(sampleImages[position]);
-        }
-    };
 
     public void onClick(View v) {
         super.onClick(v);
