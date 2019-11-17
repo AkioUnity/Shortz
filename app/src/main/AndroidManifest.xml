@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Boarding3Activity"></activity>
+        <activity android:name=".WatchParty0Activity"
+            android:theme="@style/AppTheme.MyTheme"></activity>
+        <activity android:name=".Boarding3Activity" />
         <activity android:name=".Boarding2Activity" />
         <activity android:name=".Boarding1Activity" />
         <activity android:name=".RegisterPayment2Activity" />

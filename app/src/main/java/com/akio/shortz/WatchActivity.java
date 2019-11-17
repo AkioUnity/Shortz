@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Layout;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.MediaController;
+import android.widget.Spinner;
 import android.widget.VideoView;
 
 import adapter.TabproductpageAdapter;
@@ -39,6 +42,16 @@ public class WatchActivity extends AppCompatActivity implements View.OnClickList
         shareBtn.setOnClickListener(this);
         shareBtn= findViewById(R.id.watch_party_btn);
         shareBtn.setOnClickListener(this);
+
+        Spinner dropdown = findViewById(R.id.watch_spinner1);
+        String[] items = new String[]{"Season 1", "Season 2", "Season 3"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_item, items);
+        dropdown.setAdapter(adapter);
+
+        Spinner dropdown2 = findViewById(R.id.watch_spinner2);
+        String[] items2 = new String[]{"Select Episode", "1. Family Affair", "2. Family Affair"};
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, R.layout.spinner_item, items2);
+        dropdown2.setAdapter(adapter2);
 
 //        InitVideo();
     }
@@ -87,7 +100,7 @@ public class WatchActivity extends AppCompatActivity implements View.OnClickList
                 break;
             }
             case R.id.watch_party_btn: {
-                Intent i = new Intent(this, WatchPartyActivity.class);
+                Intent i = new Intent(this, WatchParty0Activity.class);
                 this.startActivity(i);
                 break;
             }

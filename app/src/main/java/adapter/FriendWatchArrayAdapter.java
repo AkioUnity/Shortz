@@ -19,13 +19,11 @@ import android.widget.TextView;
 import com.akio.shortz.ProfileActivity;
 import com.akio.shortz.R;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FriendArrayAdapter extends ArrayAdapter<String> implements Filterable {
+public class FriendWatchArrayAdapter extends ArrayAdapter<String> implements Filterable {
     String nameList[];
     int pic[];
     private List<Integer> filteredData = null;
@@ -33,7 +31,7 @@ public class FriendArrayAdapter extends ArrayAdapter<String> implements Filterab
     Context context;
     private ItemFilter mFilter = new ItemFilter();
 
-    public FriendArrayAdapter(Context applicationContext, String[] names, int[] avatars) {
+    public FriendWatchArrayAdapter(Context applicationContext, String[] names, int[] avatars) {
         super(applicationContext, R.layout.friend_list_item, names);
         this.nameList = names;
         this.pic = avatars;
@@ -65,51 +63,11 @@ public class FriendArrayAdapter extends ArrayAdapter<String> implements Filterab
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        view = inflater.inflate(R.layout.friend_list_item, viewGroup, false);
+        view = inflater.inflate(R.layout.friend_watch_list_item, viewGroup, false);
         TextView name = view.findViewById(R.id.friend_name);
         ImageView icon = view.findViewById(R.id.friend_icon);
         name.setText(nameList[filteredData.get(i)]);
         icon.setImageResource(pic[filteredData.get(i)]);
-
-        icon = view.findViewById(R.id.friend_add_btn);
-        icon.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.d("btn", "Add Friend");
-                LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-                @SuppressLint("InflateParams") View alertLayout = inflater.inflate(R.layout.add_friend_dialog, null);
-
-                AlertDialog.Builder login = new AlertDialog.Builder(v.getRootView().getContext());
-
-                login.setView(alertLayout);
-//                login.setCancelable(false);
-//                login.setPositiveButton("OKAY", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialogInterface, int i) {
-//                        Intent in = new Intent(context, ProfileActivity.class);
-//                        context.startActivity(in);
-//                    }
-//                });
-                final AlertDialog dialog = login.create();
-                dialog.setOnShowListener(new DialogInterface.OnShowListener() {
-                    @Override
-                    public void onShow(DialogInterface arg0) {
-                        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.parseColor("#017FB3"));
-                    }
-                });
-                dialog.show();
-                TextView okBtn=dialog.findViewById(R.id.friend_add_ok_btn);
-                okBtn.setOnClickListener(new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v) {
-                        Intent in = new Intent(context, ProfileActivity.class);
-                        context.startActivity(in);
-                    }
-                });
-
-
-            }
-        });
         return view;
     }
 
@@ -151,6 +109,5 @@ public class FriendArrayAdapter extends ArrayAdapter<String> implements Filterab
             filteredData = (ArrayList<Integer>) results.values;
             notifyDataSetChanged();
         }
-
     }
 }

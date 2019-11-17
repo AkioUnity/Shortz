@@ -8,13 +8,13 @@ import android.widget.ImageView;
 
 import com.akio.shortz.R;
 
-public class ImageAdapterGridView extends BaseAdapter {
+public class BoardingGridViewAdapter extends BaseAdapter {
     private Context mContext;
     Integer[] imageIDs = {
             R.drawable.top_channel0, R.drawable.top_channel1, R.drawable.top_channel2, R.drawable.top_channel3
     };
 
-    public ImageAdapterGridView(Context c) {
+    public BoardingGridViewAdapter(Context c) {
         mContext = c;
     }
 

@@ -17,4 +17,6 @@
 
     <dimen name="home_channel1_width">120dp</dimen>
     <dimen name="home_channel1_height">180dp</dimen>
+
+    <dimen name="watch_shadow_top_margin">-30dp</dimen>
 </resources>

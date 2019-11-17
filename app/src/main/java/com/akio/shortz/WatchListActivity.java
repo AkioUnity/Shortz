@@ -21,7 +21,7 @@ public class WatchListActivity extends BaseActivity {
         ImageView shareBtn = findViewById(R.id.shareBtn);
         shareBtn.setOnClickListener(this);
 
-        androidGridView = (GridView) findViewById(R.id.watch_list_view);
+        androidGridView = findViewById(R.id.watch_list_view);
         androidGridView.setAdapter(new ImageAdapterGridView(this));
 
         androidGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -23,13 +23,28 @@
 
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimaryDark">@color/yellow</item>
+        <item name="colorPrimary">@color/yellow</item>
         <item name="android:windowDrawsSystemBarBackgrounds">false</item>
         <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <style name="AppTheme.MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/yellow</item>
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="android:textColorPrimary">@color/white</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+    <style name="MyDatePicker" parent="@android:style/Widget.Material.DatePicker">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:colorControlActivated">#ffea00</item>
+        <item name="colorControlNormal">#d50000</item>
+    </style>
 
 </resources>

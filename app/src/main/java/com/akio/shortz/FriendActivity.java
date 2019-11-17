@@ -1,5 +1,6 @@
 package com.akio.shortz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -34,6 +35,8 @@ public class FriendActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         ImageView searchBtn = findViewById(R.id.search_menu);
+        searchBtn.setOnClickListener(this);
+        searchBtn = findViewById(R.id.friend_invitation_btn);
         searchBtn.setOnClickListener(this);
         searchBtn = findViewById(R.id.back_friend_toolbar);
         searchBtn.setOnClickListener(this);
@@ -104,6 +107,12 @@ public class FriendActivity extends BaseActivity {
                 friendListView.setAdapter(adapter);
                 break;
             }
+            case R.id.friend_invitation_btn: {
+                Intent in = new Intent(this, ProfileActivity.class);
+                this.startActivity(in);
+                break;
+            }
+
             case R.id.search_close_btn: {
                 search_text.setText("");
                 adapter = new FriendArrayAdapter(getApplicationContext(), recent_nameList, recent_pics);
