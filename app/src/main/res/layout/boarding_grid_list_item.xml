@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+    android:gravity="center">
+    <LinearLayout
+        android:id="@+id/grid_item_box0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:background="@drawable/grid_item_border">
+        <TextView
+            android:id="@+id/grid_item_text0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/assistant_semibold"
+            android:textSize="16dp"
+            android:text="Tablet"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/grid_item_box1"
+        android:layout_width="wrap_content"
+        android:layout_marginVertical="2dp"
+        android:layout_marginHorizontal="1dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grid_item_boarder0">
+        <TextView
+            android:id="@+id/grid_item_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="13dp"
+            android:fontFamily="@font/assistant_semibold"
+            android:textSize="16dp"
+            android:text="Tablet"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</LinearLayout>

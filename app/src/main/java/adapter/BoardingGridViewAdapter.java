@@ -1,25 +1,27 @@
 package adapter;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.akio.shortz.R;
 
 public class BoardingGridViewAdapter extends BaseAdapter {
     private Context mContext;
-    Integer[] imageIDs = {
-            R.drawable.top_channel0, R.drawable.top_channel1, R.drawable.top_channel2, R.drawable.top_channel3
-    };
+    private LayoutInflater inflater;
+    String nameList[];
 
-    public BoardingGridViewAdapter(Context c) {
+    public BoardingGridViewAdapter(Context c,String[] names) {
         mContext = c;
+        this.nameList = names;
     }
 
     public int getCount() {
-        return imageIDs.length;
+        return nameList.length;
     }
 
     public Object getItem(int position) {
@@ -30,18 +32,13 @@ public class BoardingGridViewAdapter extends BaseAdapter {
         return 0;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView mImageView;
-
-        if (convertView == null) {
-            mImageView = new ImageView(mContext);
-//                mImageView.setLayoutParams(new GridView.LayoutParams(130, 130));
-//                mImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-//                mImageView.setPadding(0, 5,0,10);
-        } else {
-            mImageView = (ImageView) convertView;
-        }
-        mImageView.setImageResource(imageIDs[position]);
-        return mImageView;
+    public View getView(int position, View view, ViewGroup parent) {
+        inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        view = inflater.inflate(R.layout.boarding_grid_list_item, parent, false);
+        TextView name = view.findViewById(R.id.grid_item_text0);
+        name.setText(nameList[position]);
+        name = view.findViewById(R.id.grid_item_text1);
+        name.setText(nameList[position]);
+        return view;
     }
 }
