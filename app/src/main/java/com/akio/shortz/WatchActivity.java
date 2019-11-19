@@ -43,6 +43,9 @@ public class WatchActivity extends AppCompatActivity implements View.OnClickList
         shareBtn= findViewById(R.id.watch_party_btn);
         shareBtn.setOnClickListener(this);
 
+        shareBtn= findViewById(R.id.watch_play_btn);
+        shareBtn.setOnClickListener(this);
+
         Spinner dropdown = findViewById(R.id.watch_spinner1);
         String[] items = new String[]{"Season 1", "Season 2", "Season 3"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_item, items);
@@ -52,27 +55,27 @@ public class WatchActivity extends AppCompatActivity implements View.OnClickList
         String[] items2 = new String[]{"Select Episode", "1. Family Affair", "2. Family Affair"};
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, R.layout.spinner_item, items2);
         dropdown2.setAdapter(adapter2);
-
-//        InitVideo();
+        InitVideo();
     }
 
     public void InitVideo(){
 
         videoView =  (VideoView) findViewById(R.id.videoplayer);
-        String uriPath="http://2019fun.justmy.com/upload/video1.mp4";
+//        String uriPath="http://2019fun.justmy.com/upload/video1.mp4";
+        String uriPath= "android.resource://" + getPackageName() + "/" + R.raw.video1;
         Uri uri = Uri.parse(uriPath);
         videoView.setVideoURI(uri);
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);
         videoView.setMediaController(mediaController);
-        videoView.setVisibility(View.VISIBLE);
-        videoView.start();
-        viewpager1.setOnClickListener(this);
+//        videoView.setVisibility(View.VISIBLE);
+//        videoView.start();
+//        viewpager1.setOnClickListener(this);
     }
 
     public void onClick(View v) {
         switch (v.getId()) {
-            case  R.id.video_btn1: {
+            case  R.id.watch_play_btn: {
                 videoView.setVisibility(View.VISIBLE);
                 videoView.start();
                 // do something for button 1 click

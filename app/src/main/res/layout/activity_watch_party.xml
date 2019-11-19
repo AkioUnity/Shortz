@@ -28,10 +28,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
+                    android:visibility="gone"
                     android:src="@drawable/watch_party_image" />
                 <VideoView
                     android:id="@+id/videoplayer"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:layout_width="match_parent"
                     android:layout_height="260dp" />
                 <LinearLayout

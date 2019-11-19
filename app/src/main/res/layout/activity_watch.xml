@@ -132,6 +132,7 @@
                 </LinearLayout>
 
                 <ImageView
+                    android:id="@+id/watch_play_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/watch_play_btn"/>
@@ -147,8 +148,11 @@
                     android:text="The game follows two contestants who take part in a casual game night with three celebrities each, making the main episode a game between two four-player teams. Five games are played on each episode, with teams accumulating points based on their performance in each of the games."
                     android:textColor="#ffffff"
                     android:textSize="13dp" />
-
-
+                <VideoView
+                    android:id="@+id/videoplayer"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp" />
             </LinearLayout>
         </ScrollView>
 

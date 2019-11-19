@@ -17,13 +17,13 @@ public class WatchPartyActivity extends AppCompatActivity implements View.OnClic
 
         ImageView backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(this);
-//        InitVideo();
-
+        InitVideo();
     }
 
     public void InitVideo(){
         VideoView videoView =  (VideoView) findViewById(R.id.videoplayer);
-        String uriPath="http://2019fun.justmy.com/upload/video2.mp4";
+//        "http://2019fun.justmy.com/upload/video2.mp4";
+        String uriPath= "android.resource://" + getPackageName() + "/" + R.raw.video2;
         Uri uri = Uri.parse(uriPath);
         videoView.setVideoURI(uri);
 //        MediaController mediaController = new MediaController(this);

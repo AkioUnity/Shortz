@@ -110,12 +110,12 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ViewHold
         public ViewHolder(View itemView) {
             super(itemView);
             channelBtn = itemView.findViewById(R.id.channelBtn);
-            if (id==0){
-                ViewGroup.LayoutParams layoutParams = channelBtn.getLayoutParams();
-                layoutParams.width = (int) context.getResources().getDimension(R.dimen.home_channel1_width);
-                layoutParams.height= (int) context.getResources().getDimension(R.dimen.home_channel1_height);
-                channelBtn.setLayoutParams(layoutParams);
-            }
+//            if (id==0){
+//                ViewGroup.LayoutParams layoutParams = channelBtn.getLayoutParams();
+//                layoutParams.width = (int) context.getResources().getDimension(R.dimen.home_channel1_width);
+//                layoutParams.height= (int) context.getResources().getDimension(R.dimen.home_channel1_height);
+//                channelBtn.setLayoutParams(layoutParams);
+//            }
 //            txtprice=itemView.findViewById(R.id.txtprice);
 //            txtproductname=itemView.findViewById(R.id.txtproductname);
 //            txtreviews=itemView.findViewById(R.id.txtreviews);

@@ -49,6 +49,10 @@ public class Boarding3Activity extends Base0Activity {
     public void Update(){
         TextView title= findViewById(R.id.boarding_title);
         String nameList[];
+        if (step<3){
+            step=3;
+            finish();
+        }
         if (step==3){
             title.setText("Which devices will you be using?");
             nameList= new String[]{"Tablet", "Playstation", "Phone", "Computer", "Smart TV", "FireTV Stick", "XBox"};
@@ -60,23 +64,28 @@ public class Boarding3Activity extends Base0Activity {
         }
         else{
             nameList= new String[]{"Generations", "Big Brother", "7 de Laan", "The Curse of Oak...", "Muvhango", "E! News", "Uzalo", "Just for Laughs", "Skeem Saam", "Ellen", "Isidingo", "The Price is Right", "Harry", "Masterchef", "Last Week tonight", "Law & Order", "Big Bang Theory"};
-            nameList= new String[]{"Tablet", "Playstation", "Phone", "Computer", "Smart TV", "FireTV Stick", "XBox"};
         }
 
         gridView.setAdapter(new BoardingGridViewAdapter(this,nameList));
     }
 
     public void onClick(View v) {
-        super.onClick(v);
+//        super.onClick(v);
         switch (v.getId()) {
             case R.id.boarding_next_btn: {
                 step++;
                 if (step>5){
+                    step=5;
                     Intent i = new Intent(this, HomeActivity.class);
                     this.startActivity(i);
                 }
                 else
                     Update();
+                break;
+            }
+            case R.id.first_back_btn: {
+                step--;
+                Update();
                 break;
             }
         }
